@@ -1,0 +1,27 @@
+.curso {
+  margin-top: 6.5rem;
+  padding: 8rem 0;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .curso-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .curso .contenido {
+    grid-column: 2/3;
+    padding: 0 10rem 0 0;
+  }
+}
+
+.curso .contenido .heading {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+.curso .contenido p {
+  text-align: center;
+  color: var(--white)
+}

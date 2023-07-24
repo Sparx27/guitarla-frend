@@ -1,0 +1,173 @@
+:root {
+  --primary: #e99401;
+  --black: #262626;
+  --white: #FFF;
+  --fuente-principal: 'Outfit', sans-serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 2rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+[class*="contenedor"], 
+main {
+  width: min(95%, 120rem);
+  margin: 3rem auto;
+}
+[class*="heading"] {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+  color: var(--primary);
+  margin: 5rem 0;
+}
+
+/*** Header ***/
+.header {
+  background-image: linear-gradient(to right, rgb(0 0 0 / .8), rgb(0 0 0 / .7)), url(/img/header.jpg);
+  padding: 6rem 0;
+  background-size: cover;
+  background-position: center center;
+}
+.header .logo {
+  width: 25rem;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .barra {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.header .navegacion {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.header .navegacion a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.7rem;
+  transition: all .3s;
+}
+.header .navegacion a:hover {
+  color: var(--primary);
+}
+.header .navegacion .active {
+  color: var(--primary)
+}
+
+.header .links {
+  position: relative;
+  overflow: hidden;
+}
+.header .links::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1.5px solid var(--primary);
+  transform: translateX(-110%);
+  transition: all .3s;
+}
+.header .links:hover::after,
+.header .active::after {
+  transform: translateX(0);
+}
+
+.header .navegacion img {
+  width: 35px;
+  padding-right: 3px;
+}
+
+/** Footer **/
+.footer {
+  background-color: var(--black);
+  padding: 4rem 0;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .footer .contenido {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer .navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+@media (min-width: 768px) {
+  .footer .navegacion {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+.footer .navegacion a {
+  font-size: 2.5rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer .copyrigth {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.footer .navegacion .links:last-of-type {
+  display: none;
+}
+
+/** Ventana de Error **/
+
+.error {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.error-enlace {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary);
+  transition: all .3s ease;
+}
+
+.bButton {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+  font-size: 2.4rem;
+  text-decoration: underline;
+  color: var(--primary);
+  background-color: var(--white);
+  cursor: pointer;
+}
